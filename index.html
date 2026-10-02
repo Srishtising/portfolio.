@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Srishti Singh | Data Analyst & Data Engineer</title>
+<meta name="description" content="Data Analyst with 1.5+ years of experience building Power BI dashboards, SQL KPI tracking and ETL pipelines.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef2f7;--surface:#fff;--ink:#14213d;--muted:#55627a;--line:#d5dce8;--accent:#2b50d6;--accent-ink:#fff;--warm:#f2a33a;--r:14px}
+:root[data-theme=dark]{--bg:#0f1830;--surface:#18233f;--ink:#e8edf8;--muted:#9aa8c4;--line:#2a3a60;--accent:#7b9bff;--accent-ink:#0f1830}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.65 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--warm);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+section{padding:72px 0}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:28px}
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:20px;height:60px}
+nav .logo{font:800 1.1rem "Bricolage Grotesque";text-decoration:none;margin-right:auto}
+nav a.l{text-decoration:none;color:var(--muted);font-size:.95rem}
+nav a.l:hover{color:var(--ink)}
+button{font:inherit;cursor:pointer;color:inherit}
+.icon{background:none;border:1px solid var(--line);border-radius:50%;width:36px;height:36px}
+.hero{padding:56px 0 40px}
+.hero .wrap{display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.8rem,8vw,5.4rem);font-weight:800}
+.hero .role{font:500 1.25rem "Bricolage Grotesque";color:var(--accent);margin:14px 0 16px}
+.hero p{color:var(--muted);max-width:52ch}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{padding:12px 22px;border-radius:999px;border:1.5px solid var(--ink);text-decoration:none;font-weight:500;background:none}
+.btn.p{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:hover{transform:translateY(-2px)}
+.photo{position:relative;aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;border:1px solid var(--line)}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:top}
+.photo::after{content:"";position:absolute;inset:auto 0 0 0;height:8px;background:var(--warm)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.stat b{display:block;font:800 2.4rem "Bricolage Grotesque";color:var(--accent)}
+.stat span{color:var(--muted);font-size:.92rem}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.tab{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 16px;font-size:.95rem}
+.tab[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;min-height:120px;align-content:flex-start}
+.chip{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 14px;font-weight:500;animation:pop .25s ease}
+@keyframes pop{from{opacity:0;transform:scale(.92)}}
+.item{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);margin-bottom:14px;overflow:hidden}
+.item>button{width:100%;display:flex;justify-content:space-between;gap:16px;align-items:center;text-align:left;background:none;border:0;padding:20px 24px}
+.item h3{font-size:1.3rem}
+.item small{color:var(--muted);display:block;font-size:.92rem}
+.item .plus{font-size:1.6rem;color:var(--accent);transition:transform .25s}
+.item.open .plus{transform:rotate(45deg)}
+.body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s}
+.item.open .body{grid-template-rows:1fr}
+.body>div{overflow:hidden}
+.body ul{padding:0 24px 22px 44px;color:var(--muted)}
+.body li{margin-bottom:8px}
+.stack{padding:0 24px 22px;display:flex;gap:8px;flex-wrap:wrap}
+.stack span{font-size:.82rem;background:var(--bg);border-radius:6px;padding:3px 10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
+.edu{display:grid;gap:12px}
+.edu div{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:var(--r);padding:16px 22px}
+.edu b{font-family:"Bricolage Grotesque";font-size:1.1rem}
+.edu span{display:block;color:var(--muted);font-size:.95rem}
+.contact{text-align:center}
+.contact h2{font-size:clamp(2.2rem,6vw,4rem)}
+.contact p{color:var(--muted);margin-bottom:24px}
+footer{padding:28px;text-align:center;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+@media(max-width:760px){.hero .wrap{grid-template-columns:1fr}.photo{max-width:280px;order:-1}.stats{grid-template-columns:1fr 1fr}nav .l{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" href="#top">Srishti Singh</a>
+  <a class="l" href="#skills">Skills</a><a class="l" href="#experience">Experience</a><a class="l" href="#projects">Projects</a><a class="l" href="#education">Education</a><a class="l" href="#contact">Contact</a>
+  <button class="icon" id="theme" aria-label="Toggle dark mode">◐</button>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <div>
+    <h1>Srishti Singh</h1>
+    <div class="role">Data Analyst · Data Engineer</div>
+    <p>I turn high-volume, messy data into dashboards and pipelines that teams rely on to make revenue decisions. Currently analysing player behaviour for a live mobile game, and building toward data engineering.</p>
+    <div class="btns">
+      <a class="btn p" href="#projects">See my projects</a>
+      <a class="btn" href="Srishti_Singh-Resume.pdf" download>Download resume</a>
+    </div>
+  </div>
+  <!-- Put your photo next to this file and name it photo.jpg -->
+  <div class="photo"><img src="photo.jpg" alt="Portrait of Srishti Singh"></div>
+</div>
+<div class="wrap stats" aria-label="Highlights">
+  <div class="stat"><b data-n="500" data-s="K+">0</b><span>user records analysed</span></div>
+  <div class="stat"><b data-n="10" data-s="+">0</b><span>Power BI dashboards shipped</span></div>
+  <div class="stat"><b data-n="12" data-s="%">0</b><span>lift in campaign conversion</span></div>
+  <div class="stat"><b data-n="1.5" data-s="+">0</b><span>years of experience</span></div>
+</div></header>
+
+<section id="skills"><div class="wrap">
+  <h2>Skills</h2>
+  <div class="tabs" id="tabs" role="group" aria-label="Filter skills"></div>
+  <div class="chips" id="chips" aria-live="polite"></div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <h2>Experience</h2>
+  <div class="item open">
+    <button aria-expanded="true"><div><h3>Business Analyst (Data Analytics), Aadhya IT Services</h3><small>Mar 2024 – Present, Bhopal, India</small></div><span class="plus">+</span></button>
+    <div class="body"><div>
+      <ul>
+        <li>Mined 500K+ user records in Looker and Excel to surface churn and engagement patterns, driving a 12% lift in campaign conversion for a live mobile gaming app.</li>
+        <li>Shipped 10+ Power BI dashboards tracking player lifecycle and behaviour. The marketing team uses them as their main tool for retention decisions.</li>
+        <li>Designed SQL and Optimove KPI tracking for engagement, retention and conversion, replacing manual weekly reporting and cutting turnaround time.</li>
+      </ul>
+      <div class="stack"><span>Power BI</span><span>Advanced Excel</span><span>SQL</span><span>Looker</span><span>Optimove</span><span>Trello</span></div>
+    </div></div>
+  </div>
+  <div class="item">
+    <button aria-expanded="false"><div><h3>Data Engineer Intern, Lognormal Analytics</h3><small>Mar 2023 – May 2023, Hyderabad, India</small></div><span class="plus">+</span></button>
+    <div class="body"><div>
+      <ul>
+        <li>Built unified data pipelines integrating APIs, SQL databases and flat files, tracking delivery milestones in Jira to keep cross-team work on schedule.</li>
+        <li>Built and optimised SQL and Python (Pandas, NumPy) ETL pipelines for hospital records, improving processing reliability.</li>
+        <li>Analysed patient datasets in Power BI and piloted BigQuery and AWS S3 workflows, laying groundwork for a cloud migration.</li>
+      </ul>
+      <div class="stack"><span>SQL</span><span>Python</span><span>Power BI</span><span>BigQuery</span><span>AWS S3</span><span>DBeaver</span><span>Jira</span></div>
+    </div></div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <h2>Projects</h2>
+  <div class="tabs" id="ptabs" role="group" aria-label="Filter projects"></div>
+  <div class="grid" id="pgrid"></div>
+</div></section>
+
+<section id="education"><div class="wrap">
+  <h2>Education</h2>
+  <div class="edu">
+    <div><b>M.Sc. in Data Science & AI</b><span>BITS Pilani · Expected Jan 2028</span></div>
+    <div><b>B.Tech in Electrical Engineering</b><span>Institute of Engineering and Rural Technology, Prayagraj · 2019–2023 · 85.6%</span></div>
+    <div><b>Higher Secondary Certificate</b><span>International Hindu School, Varanasi · 2018–2019 · 82.3%</span></div>
+    <div><b>Secondary School Certificate</b><span>International Hindu School, Varanasi · 2016–2017 · 10 CGPA</span></div>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <h2>Let's work with your data</h2>
+  <p>Open to data analyst and data engineering roles.</p>
+  <div class="btns" style="justify-content:center">
+    <a class="btn p" href="mailto:singhsrishti1103@gmail.com">Email me</a>
+    <button class="btn" id="copy">Copy email</button>
+    <!-- TODO: replace # with your real profile URLs -->
+    <a class="btn" href="https://www.linkedin.com/in/srishti-singh-42619521b" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="https://github.com/Srishtising" target="_blank" rel="noopener">GitHub</a>
+  </div>
+  <p style="margin-top:20px">+91 7905954209</p>
+</div></section>
+<footer>© <span id="yr"></span> Srishti Singh</footer>
+
+<script>
+const $=(s,r=document)=>r.querySelector(s);
+// Theme
+const root=document.documentElement;
+try{const t=localStorage.getItem('theme');if(t)root.dataset.theme=t;else if(matchMedia('(prefers-color-scheme:dark)').matches)root.dataset.theme='dark'}catch(e){}
+$('#theme').onclick=()=>{const d=root.dataset.theme==='dark'?'light':'dark';root.dataset.theme=d;try{localStorage.setItem('theme',d)}catch(e){}};
+$('#yr').textContent=new Date().getFullYear();
+
+// Count-up stats
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+document.querySelectorAll('[data-n]').forEach(el=>{
+  const n=+el.dataset.n,s=el.dataset.s,dec=n%1?1:0;
+  if(reduce){el.textContent=n+s;return}
+  const t0=performance.now();
+  (function f(t){const p=Math.min((t-t0)/1400,1),e=1-Math.pow(1-p,3);el.textContent=(n*e).toFixed(dec)+(p<1?'':s);if(p<1)requestAnimationFrame(f)})(t0);
+});
+
+// Skills filter
+const skills={
+ "Programming & Analysis":["SQL","Python","Pandas","NumPy","Scikit-learn","PySpark","C","C++"],
+ "Visualisation":["Power BI","Looker","Advanced Excel","Tableau"],
+ "Cloud & Infrastructure":["AWS (S3, EC2, IAM)","Terraform"],
+ "Tools":["Jira","Trello","DBeaver","SSMS","Optimove"],
+ "Core Concepts":["Data Structures & Algorithms","ETL Design","Infrastructure as Code"],
+ "Web":["HTML","CSS"]};
+function filterUI(tabsEl,labels,onPick){
+  ["All",...labels].forEach((l,i)=>{const b=document.createElement('button');b.className='tab';b.textContent=l;b.setAttribute('aria-pressed',i===0);
+    b.onclick=()=>{tabsEl.querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-pressed',x===b));onPick(l)};tabsEl.append(b)});
+  onPick("All");
+}
+filterUI($('#tabs'),Object.keys(skills),l=>{
+  const list=l==="All"?Object.values(skills).flat():skills[l];
+  $('#chips').innerHTML=list.map(s=>`<span class="chip">${s}</span>`).join('');
+});
+
+// Experience accordion
+document.querySelectorAll('.item>button').forEach(b=>b.onclick=()=>{
+  const it=b.parentElement,o=it.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+
+// Projects
+const projects=[
+ {t:"AWS Infrastructure-as-Code with Terraform",c:"Cloud",s:["AWS S3","IAM","EC2","Terraform"],d:["Provisioned S3, IAM and EC2 with Terraform for repeatable, version-controlled deployments instead of manual console setup.","Defined IAM roles and policies that enforce least-privilege access.","Modularised the configuration to standardise environments and eliminate configuration drift."]},
+ {t:"E-Commerce Seller Recommendation System",c:"Data Engineering",s:["PySpark","Apache Hudi","AWS S3","YAML"],d:["Built an end-to-end pipeline on AWS S3 with PySpark and Apache Hudi to process seller and transaction data at scale.","Drove behaviour from YAML config, with automated data quality checks that quarantine invalid records.","Generated top-selling product recommendations per seller for merchandising and inventory decisions."]},
+ {t:"Heart Disease Prediction",c:"Machine Learning",s:["Python","Pandas","Scikit-learn"],d:["Preprocessed data: missing values, categorical encoding and feature scaling.","Built and tuned a Decision Tree classifier, using pruning to reduce overfitting.","Reached 86.41% accuracy and 93.14% recall on test data."]}];
+const grid=$('#pgrid');
+filterUI($('#ptabs'),[...new Set(projects.map(p=>p.c))],l=>{
+  grid.innerHTML=projects.filter(p=>l==="All"||p.c===l).map(p=>`
+   <article class="item open" style="margin:0"><div style="padding:22px 24px 8px"><small>${p.c}</small><h3>${p.t}</h3></div>
+   <ul style="padding:8px 24px 10px 44px;color:var(--muted)">${p.d.map(x=>`<li style="margin-bottom:8px">${x}</li>`).join('')}</ul>
+   <div class="stack">${p.s.map(x=>`<span>${x}</span>`).join('')}</div></article>`).join('');
+});
+
+// Copy email
+$('#copy').onclick=async e=>{try{await navigator.clipboard.writeText('singhsrishti1103@gmail.com');e.target.textContent='Copied'}catch(_){e.target.textContent='singhsrishti1103@gmail.com'}setTimeout(()=>e.target.textContent='Copy email',2000)};
+</script>
+</body>
+</html>
